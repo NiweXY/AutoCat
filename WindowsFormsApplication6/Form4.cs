@@ -35,7 +35,33 @@ namespace WindowsFormsApplication6
         private void button1_Click(object sender, EventArgs e)
         {
             int i = comboBox1.SelectedIndex;
-           
+            if (i == 0)
+            {
+                // "Легковий"
+                if ((textBox1.Text != "") && (textBox3.Text != "") && (textBox4.Text != "") && (textBox5.Text != ""))
+                {
+                    string q = "insert into auto([Марка автомобіля],[Тип],[Номерний знак],[Строк служби],[Особливість]) values('" + textBox1.Text.ToString() + "','Легковий','" + textBox3.Text.ToString() + "','" + textBox4.Text.ToString() + "','" + textBox5.Text.ToString() + "')";
+                    dou(q);
+                    textBox1.Text = null; textBox3.Text = null; textBox4.Text = null;textBox5.Text = null;
+                }
+                else
+                {
+                    MessageBox.Show("Заповніть всі поля!!!");
+                }
+            }
+            else if (i == 1)
+            {                
+                if ((textBox1.Text != "") && (textBox3.Text != "") && (textBox4.Text != "") && (textBox5.Text != ""))
+                {
+                    string q = "insert into Auto([Марка автомобіля],[Тип],[Номерний знак],[Строк служби],[Особливість]) values('" + textBox1.Text.ToString() + "','Вантажний','" + textBox3.Text.ToString() + "','" + textBox4.Text.ToString() + "','" + textBox5.Text.ToString() + "')";
+                    dou(q);
+                    textBox1.Text = null; textBox3.Text = null; textBox4.Text = null; textBox5.Text = null;
+                }
+                else
+                {
+                    MessageBox.Show("Заповніть всі поля!!!");
+                }
+            }
         }
 
         private void dou(String q)
@@ -57,7 +83,17 @@ namespace WindowsFormsApplication6
 
         private void loaddata()
         {
-          
+            OleDbDataAdapter adapter = new OleDbDataAdapter();
+
+            cn.Open();
+            OleDbCommand command = new OleDbCommand("SELECT * FROM Auto", cn);
+            cn.Close();
+
+            adapter.SelectCommand = command;
+            DataSet dataSet = new DataSet();
+            adapter.Fill(dataSet);
+            dataGridView1.DataSource = dataSet.Tables[0];
+            adapter.Update(dataSet); 
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -91,7 +127,13 @@ namespace WindowsFormsApplication6
 
         private void dataGridView1_Click(object sender, EventArgs e)
         {
-          
+            int i = dataGridView1.CurrentCell.RowIndex;
+            textBox2.Text = Convert.ToString(dataGridView1[0, i].Value);
+            textBox1.Text = Convert.ToString(dataGridView1[1, i].Value);
+            comboBox1.Text = Convert.ToString(dataGridView1[2, i].Value);
+            textBox3.Text = Convert.ToString(dataGridView1[3, i].Value);
+            textBox4.Text = Convert.ToString(dataGridView1[4, i].Value);
+            textBox5.Text = Convert.ToString(dataGridView1[5, i].Value);
         }
 
         private void comboBox1_TextChanged(object sender, EventArgs e)
