@@ -79,7 +79,6 @@
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(704, 223);
             this.dataGridView1.TabIndex = 2;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dataGridView1.Click += new System.EventHandler(this.dataGridView1_Click);
             // 
             // button1
@@ -137,7 +136,7 @@
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(94, 20);
             this.textBox3.TabIndex = 0;
-            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
+
             // 
             // label3
             // 
@@ -147,7 +146,6 @@
             this.label3.Size = new System.Drawing.Size(86, 13);
             this.label3.TabIndex = 1;
             this.label3.Text = "Номерний знак";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // textBox4
             // 
@@ -155,7 +153,7 @@
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(100, 20);
             this.textBox4.TabIndex = 0;
-            this.textBox4.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
+
             // 
             // label4
             // 
@@ -182,7 +180,6 @@
             this.textBox5.Size = new System.Drawing.Size(92, 20);
             this.textBox5.TabIndex = 7;
             // 
-            // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
@@ -192,7 +189,6 @@
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(100, 21);
             this.comboBox1.TabIndex = 9;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             this.comboBox1.TextChanged += new System.EventHandler(this.comboBox1_TextChanged);
             // 
             // button5
@@ -205,7 +201,7 @@
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
-            // textBox2
+           // textBox2
             // 
             this.textBox2.Location = new System.Drawing.Point(161, 307);
             this.textBox2.Name = "textBox2";
@@ -220,7 +216,7 @@
             this.label7.Size = new System.Drawing.Size(26, 13);
             this.label7.TabIndex = 14;
             this.label7.Text = "Код";
-            // 
+            
             // textBox6
             // 
             this.textBox6.Location = new System.Drawing.Point(519, 269);
@@ -228,6 +224,7 @@
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(91, 20);
             this.textBox6.TabIndex = 15;
+         
             // 
             // label6
             // 
@@ -237,16 +234,15 @@
             this.label6.Size = new System.Drawing.Size(81, 13);
             this.label6.TabIndex = 16;
             this.label6.Text = "Ціна за годину";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(626, 253);
+            this.label8.Location = new System.Drawing.Point(623, 240);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(81, 13);
+            this.label8.Size = new System.Drawing.Size(81, 26);
             this.label8.TabIndex = 17;
-            this.label8.Text = "Ціна за годину";
+            this.label8.Text = "Ціна за годину\r\nз водієм";
             // 
             // textBox7
             // 
@@ -255,6 +251,7 @@
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(91, 20);
             this.textBox7.TabIndex = 18;
+          
             // 
             // Form4
             // 

@@ -37,7 +37,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(26, 12);
+            this.button3.Location = new System.Drawing.Point(12, 26);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(104, 41);
             this.button3.TabIndex = 2;
@@ -47,7 +47,7 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(26, 59);
+            this.button4.Location = new System.Drawing.Point(12, 92);
             this.button4.MaximumSize = new System.Drawing.Size(104, 39);
             this.button4.MinimumSize = new System.Drawing.Size(104, 39);
             this.button4.Name = "button4";
@@ -59,7 +59,7 @@
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(26, 209);
+            this.button6.Location = new System.Drawing.Point(268, 213);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(104, 28);
             this.button6.TabIndex = 5;
@@ -69,7 +69,7 @@
             // 
             // button7
             // 
-            this.button7.Location = new System.Drawing.Point(26, 118);
+            this.button7.Location = new System.Drawing.Point(12, 160);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(104, 28);
             this.button7.TabIndex = 6;
@@ -83,7 +83,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ClientSize = new System.Drawing.Size(419, 264);
+            this.ClientSize = new System.Drawing.Size(384, 264);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.button4);
@@ -91,7 +91,7 @@
             this.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximumSize = new System.Drawing.Size(435, 302);
-            this.MinimumSize = new System.Drawing.Size(435, 302);
+            this.MinimumSize = new System.Drawing.Size(400, 302);
             this.Name = "Меню";
             this.Text = "Початкове меню";
             this.Load += new System.EventHandler(this.Меню_Load);

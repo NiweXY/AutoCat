@@ -51,7 +51,7 @@ namespace WindowsFormsApplication6
         {
             metLoad();
         }
-        
+
         public void metLoad()
         {
             string comStr1 = "";
@@ -59,7 +59,8 @@ namespace WindowsFormsApplication6
             string comStr3 = "";
             string comStr4 = "";
             string comStr5 = "";
-
+            string comStr6 = "";
+            string comStr7 = "";
             if (textBox1.Text != "")
             { comStr1 = " where ( [Марка автомобіля] = '" + textBox1.Text.ToString() + "' ) "; }
 
@@ -95,19 +96,42 @@ namespace WindowsFormsApplication6
                     comStr5 = " and ( [Особливість] = '" + textBox5.Text.ToString() + "' ) ";
             }
 
-            String q = "SELECT * FROM auto " + comStr1 + comStr2 + comStr3 + comStr4 + comStr5;
 
-            OleDbDataAdapter adapter = new OleDbDataAdapter();
 
-            cn.Open();
-            OleDbCommand command = new OleDbCommand(q,cn);//("SELECT * FROM Auto", cn);
-            cn.Close();
+            if (textBox2.Text != "")
+            {
+                if (comStr1 == "" && comStr2 == "" && comStr3 == "" && comStr4 == "" && comStr5 == "")
+                    comStr6 = " where ( [Ціна за годину] = '" + textBox5.Text.ToString() + "' ) ";
+                else
+                    comStr6 = " and ( [Ціна за годину] = '" + textBox5.Text.ToString() + "' ) ";
+            }
 
-            adapter.SelectCommand = command;
-            DataSet dataSet = new DataSet();
-            adapter.Fill(dataSet);
-            dataGridView1.DataSource = dataSet.Tables[0];
-            adapter.Update(dataSet);        
+
+            if (textBox6.Text != "")
+            {
+                if (comStr1 == "" && comStr2 == "" && comStr3 == "" && comStr4 == "" && comStr5 == "" && comStr6 == "")
+                    comStr7 = " where ( [Ціна за годину з водієм] = '" + textBox5.Text.ToString() + "' ) ";
+                else
+                    comStr7 = " and ( [Ціна за годину з водієм] = '" + textBox5.Text.ToString() + "' ) ";
+
+            }
+
+
+
+                String q = "SELECT * FROM auto " + comStr1 + comStr2 + comStr3 + comStr4 + comStr5 + comStr6 + comStr7;
+
+                OleDbDataAdapter adapter = new OleDbDataAdapter();
+
+                cn.Open();
+                OleDbCommand command = new OleDbCommand(q, cn);//("SELECT * FROM Auto", cn);
+                cn.Close();
+
+                adapter.SelectCommand = command;
+                DataSet dataSet = new DataSet();
+                adapter.Fill(dataSet);
+                dataGridView1.DataSource = dataSet.Tables[0];
+                adapter.Update(dataSet);
+            
         }
 
         private void comboBox1_TextChanged(object sender, EventArgs e)

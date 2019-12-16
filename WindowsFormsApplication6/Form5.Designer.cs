@@ -47,14 +47,11 @@
             // 
             // pictureBox1
             // 
-/*            this.pictureBox1.BackgroundImage = global::WindowsFormsApplication6.Properties.Resources.Hydrangeas;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 96);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;*/
+            this.pictureBox1.Size = new System.Drawing.Size(100, 50);
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
             // 
             // textBox1
             // 
@@ -63,8 +60,8 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(154, 96);
             this.textBox1.TabIndex = 3;
-            this.textBox1.Text = "Виконала :\r\nСтудентка 37 групи\r\nВолинського коледжу НУХТ\r\nЄрмолаєнкова Оксана Віт" +
-                "аліївна";
+            this.textBox1.Text = "Виконали :\r\nСтудентки групи 2СТ\r\nРоманенко Олександра\r\nЄрмолаєнкова Оксана ";
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // Form5
             // 
